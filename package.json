@@ -26,6 +26,7 @@
     "@types/react": "^18.3.10",
     "@types/react-native": "^0.72.8",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^4.6.2",
