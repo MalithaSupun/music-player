@@ -13,7 +13,7 @@ export const TrackListItem = ({track}: TrackListItemProps) => {
 
     return (
     <TouchableHighlight>
-        <View>
+        <View style={styles.trackItemContainer}>
         <View>
             <FastImage source={{
                 uri: track.image ?? unknownTrackImageUri,
@@ -46,6 +46,12 @@ export const TrackListItem = ({track}: TrackListItemProps) => {
 
 
 const styles = StyleSheet.create({
+    trackItemContainer: {
+		flexDirection: 'row',
+		columnGap: 14,
+		alignItems: 'center',
+		paddingRight: 20,
+	},
 	trackArtworkImage: {
 		borderRadius: 8,
 		width: 50,

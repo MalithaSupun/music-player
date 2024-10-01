@@ -4,7 +4,7 @@ import { TrackListItem } from './TrackListitem'
 
 export type TrackListProps = Partial<FlatList<unknown>>
 
-export const TrackList = ({...flatlistProps}) => {
+export const TrackList = ({...flatlistProps}: TrackListProps) => {
 	return (
 		<FlatList
 			data={library}
@@ -16,6 +16,7 @@ export const TrackList = ({...flatlistProps}) => {
 					}}
 				/>
 			)}
+			{...flatlistProps}
 		/>
 	)
 }

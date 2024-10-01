@@ -6,7 +6,7 @@ const SongsScreen = () => {
     return (
         <View style={defaultStyles.container}>
             <ScrollView>
-                <TrackList />
+                <TrackList scrollEnabled={false}/>
             </ScrollView>
         </View>
     );
