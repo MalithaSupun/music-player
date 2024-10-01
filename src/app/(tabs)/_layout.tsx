@@ -3,10 +3,12 @@ import { BlurView } from 'expo-blur'
 import {Tabs} from 'expo-router'
 import { StyleSheet } from 'react-native'
 import { FontAwesome,FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
+import { FloatingPlayer } from '@/components/FloatingPlayer'
 
 const TabsNavigation =() => {
     return (
-        <Tabs screenOptions={{
+        <>
+         <Tabs screenOptions={{
             tabBarActiveTintColor: colors.primary,
             tabBarLabelStyle: {
                 fontSize: fontSize.xs,
@@ -47,6 +49,13 @@ const TabsNavigation =() => {
                 tabBarIcon: ({ color }) => <FontAwesome6 name='users-line' size={20} color={color} />,
             }}/>
         </Tabs>
+        <FloatingPlayer style={{
+            position: 'absolute',
+            left: '8',
+            right: '8',
+            bottom: '78'
+        }} />
+        </>
     )
 }
 
