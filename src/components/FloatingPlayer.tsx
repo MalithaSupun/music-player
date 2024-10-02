@@ -1,7 +1,7 @@
 import { unknownTrackImageUri } from '@/constants/images'
 import { StyleSheet, TouchableOpacity, View, ViewProps , Text } from 'react-native'
 import FastImage from 'react-native-fast-image'
-import { useActiveTrack } from 'react-native-track-player'
+import {Track, useActiveTrack } from 'react-native-track-player'
 import { defaultStyles } from "@/styles"
 import { PlayPauseButton, SkipToNextButton } from "@/components/PlayerControls"
 import React from "react"
@@ -18,7 +18,8 @@ export const FloatingPlayer=({style}: ViewProps) => {
     
 
     return(
-    <TouchableOpacity>
+    <TouchableOpacity activeOpacity={0.9} style={[styles.container]}>
+
         <>
         <FastImage source={{
             uri: displayedTrack.artwork ?? unknownTrackImageUri
@@ -40,6 +41,18 @@ export const FloatingPlayer=({style}: ViewProps) => {
 }
 
 const styles = StyleSheet.create({
+    container: {
+		flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#252525',
+        padding: 8,
+        borderRadius: 12,
+        paddingVertical: 10,
+        position: 'absolute',
+        bottom: 0,
+        zIndex: 1000,
+        marginBottom: 79,
+	},
     trackArtworkImage: {
 		width: 40,
 		height: 40,
