@@ -23,7 +23,7 @@ export const FloatingPlayer=({style}: ViewProps) => {
         <FastImage source={{
             uri: displayedTrack.artwork ?? unknownTrackImageUri
         }}
-        style={StyleSheet.trackArtWorkImage}
+        style={styles.trackArtworkImage}
         />
         <View style={styles.trackTitleContainer}>
             <Text style={styles.trackTitle}>{displayedTrack.title}</Text>
