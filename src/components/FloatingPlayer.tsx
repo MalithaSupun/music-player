@@ -6,6 +6,7 @@ import { defaultStyles } from "@/styles"
 import { PlayPauseButton, SkipToNextButton } from "@/components/PlayerControls"
 import React from "react"
 import { useLastActiveTrack } from '@/hooks/useLastActiveTrack'
+import { MovingText } from './MovingText'
 
 export const FloatingPlayer=({style}: ViewProps) => {
     const activeTrack = useActiveTrack()
@@ -27,7 +28,11 @@ export const FloatingPlayer=({style}: ViewProps) => {
         style={styles.trackArtworkImage}
         />
         <View style={styles.trackTitleContainer}>
-            <Text style={styles.trackTitle}>{displayedTrack.title}</Text>
+            <MovingText 
+            style={styles.trackTitle}
+            text={displayedTrack.title ?? ''}
+            animationThreshold={25}
+            />
         </View>
 
         <View style={styles.trackControlsContainer}>
